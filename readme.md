@@ -38,3 +38,6 @@ https://colab.research.google.com/drive/1kyLGR4OifFgsykcqii3LmYUwIxeoQ0VZ#scroll
 
 ## Model save link drive
 https://drive.google.com/file/d/1lrPJxmk8qJi2KKPpOSCUv3Je2ZsZBV4q/view
+
+## Contributors
+Terence COLLIN, Dimitri FENIOU
