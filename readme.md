@@ -20,13 +20,13 @@ To use just the API use requirements_api.txt
 
 ## Folders/Files
 Folders and Files for this Project : 
- * fastapi Folder :<br>
-   * Static forder countains styles.css
-   * Templates  countains index.html for the render of homepage ('http://127.0.0.1:8000/')
+ * fastapi folder :<br>
+   * Static: contains styles.css
+   * Templates:  contains index.html for the render of homepage ('http://127.0.0.1:8000/')
 
    * main.py: code to lauch the api on localhost and begin the scrap of reviews on the chosen category
    * functions.py: to remove all emojis and unnecessary spaces after the scrap in API
-   * model.py: load the pre-train, fine-tuned model of sentiment analysis used in API - used with "camembert_sentiment_anal.pt"     
+   * model.py: load the pre-train, fine-tuned model of sentiment analysis used in API - used with "camembert_sentiment_anal.pt" (link at the bottom)     
  * data folder :<br>
    * trustpilot_reviews.csv: dataset with french reviews of all categories of the website Truspilot. We use this dataset to train the model
    * trustpilot_to_predict.csv: dataset to test the model  
