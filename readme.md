@@ -1,4 +1,4 @@
-# Trustpilot API French sentiment analysis
+# Trustpilot API French sentiment analysis with CamemBert
 ## Table of contents
 * [General info](#general-info)
 * [Installation](#Installation)
@@ -17,12 +17,11 @@ Folders and Files for this Project :
    * Static forder countains styles.css
    * Templates  countains index.html for the render of homepage ('http://127.0.0.1:8000/')
 
-   * main.py: code to lauch the api on localhost
-   * preprocessing.py: to remove all emoji and html tags during after the scrap in API
-   * model.py: load the pre-train, fine-tuned model of sentiment analysis used in API
-   * scrap.py: Trustpilot scrap category using in API
+   * main.py: code to lauch the api on localhost and begin the scrap of reviews on the chosen category
+   * functions.py: to remove all emoji and unnecessary spaces after the scrap in API
+   * model.py: load the pre-train, fine-tuned model of sentiment analysis used in API - used with "camembert_sentiment_anal.pt"     
   * CSV folder <br>
-    * datasets with french reviews of all categories of the website Truspilot. We use this dataset to train the model
+    * Dataset with french reviews of all categories of the website Truspilot. We use this dataset to train the model
  * Exemples_model Folder
    * Countains the trainning in the dataset Truspilot
    * Predictions is a notebook for testing the accuracy of the model prediction on dataset
