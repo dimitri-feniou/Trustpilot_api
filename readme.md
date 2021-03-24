@@ -21,10 +21,11 @@ Folders and Files for this Project :
    * main.py: code to lauch the api on localhost and begin the scrap of reviews on the chosen category
    * functions.py: to remove all emoji and unnecessary spaces after the scrap in API
    * model.py: load the pre-train, fine-tuned model of sentiment analysis used in API - used with "camembert_sentiment_anal.pt"     
-  * CSV folder <br>
-    * Dataset with french reviews of all categories of the website Truspilot. We use this dataset to train the model
- * Exemples_model Folder
-   * Contains the trainning in the dataset Truspilot
+  * data folder <br> 
+    * trustpilot_reviews.csv: Dataset with french reviews of all categories of the website Truspilot. We use this dataset to train the model
+    * trustpilot_to_predict.csv: Dataset to test the model
+ * model folder
+   * camembert_trustpilot.ipynb: Colab which contains the trainning of the model - used with "trustpilot_reviews.csv"
    * Predictions is a notebook for testing the accuracy of the model prediction on dataset
 * Files :
   * scrap_trustpilot.py used to create the dataset for model training
