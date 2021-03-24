@@ -38,7 +38,7 @@ Folders and Files for this Project :
    * merge.py: to merge the scraped datasets
    * cleaning.py: used to remove emojis and unnecessary space in the training dataset
 
-## Collab link trained camenBert model on dataset
+## Colab link CamemBert training on dataset
 
 https://colab.research.google.com/drive/1kyLGR4OifFgsykcqii3LmYUwIxeoQ0VZ#scrollTo=xJ0vCeTDC3gr
 
