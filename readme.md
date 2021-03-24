@@ -34,9 +34,9 @@ Folders and Files for this Project :
    * camembert_trustpilot.ipynb: colab which contains the trainning of the model - used with "trustpilot_reviews.csv"
    * predictions.ipynb: colab for testing the accuracy of the model predictions - used with "trustpilot_to_predict.csv"
  * database_creation folder : <br> 
-   * scrap.py: used to create the dataset for model training
-   * merge.py: to merge the scraped datasets
-   * cleaning.py: used to remove emojis and unnecessary space in the training dataset
+   * scrap.py: used to create the dataset for model training  
+   * merge.py: to merge the scraped datasets  
+   * cleaning.py: used to remove emojis and unnecessary space in the training dataset  
 
 ## Colab link CamemBert training on dataset
 
