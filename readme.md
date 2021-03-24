@@ -17,12 +17,12 @@ Folders and Files for this Project :
    * Static forder countains styles.css
    * Templates  countains index.html for the render of homepage ('http://127.0.0.1:8000/')
 
-   * main.py content code for lauch the api on localhost
-   * preprocessing.py is for remove all emoji and html tags during the scrap in API
-   * model.py is the pre-train model of sentiment analysis used in API
-   * scrap.py Trustpilot scrap category using in API
+   * main.py: code to lauch the api on localhost
+   * preprocessing.py: to remove all emoji and html tags during after the scrap in API
+   * model.py: load the pre-train, fine-tuned model of sentiment analysis used in API
+   * scrap.py: Trustpilot scrap category using in API
   * CSV folder <br>
-    * dataset countains french reviews of all category in the website Truspilot. We use this dataset for trained the model
+    * datasets with french reviews of all categories of the website Truspilot. We use this dataset to train the model
  * Exemples_model Folder
    * Countains the trainning in the dataset Truspilot
    * Predictions is a notebook for testing the accuracy of the model prediction on dataset
