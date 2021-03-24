@@ -140,6 +140,8 @@ def scrap(category: str = 'aliments', pages: int = 1):
         'voyage': '/categories/travel_vacation',
         'véhicule_transport': '/categories/vehicles_transportation'
     }
+
+    # Scrap
     if category in dict_cat.keys():
         cat = dict_cat[category]
         trustpilot = f'https://fr.trustpilot.com{cat}?numberofreviews=500'
@@ -156,7 +158,7 @@ def scrap(category: str = 'aliments', pages: int = 1):
 
         if pages == 1:
             page_number = [1]
-        if pages > 1:
+        elif pages > 1:
             page_number = range(1, pages)
 
         list_url = []
@@ -192,33 +194,54 @@ def scrap(category: str = 'aliments', pages: int = 1):
                 rating = element.find('div', {'class': 'star-rating star-rating--medium'})
                 list_ratings.append(rating)
 
-        # json_dates = json.dumps(list_dates)
-        # json_reviews = json.dumps(list_reviews)
-        # json_ratings = json.dumps(list_ratings)
-
-        # dataframe
-        # dict_list = {'date': list_dates, 'review': list_reviews, 'rating': list_ratings}
-        # dict_json = {'date': json_dates, 'review': json_reviews, 'rating': json_ratings}
-
-        # dict_reviews = {'review': list_reviews}
-
-        # df_jsoned = jsonable_encoder(df)
-
         print('preprocess...')
-        # preprocess
+
+        # Preprocess
         list_reviews = remove_spaces(list_reviews)
         list_reviews = remove_emoji(list_reviews)
-
         tokenized_reviews = tokenize(list_reviews)
 
         dict_reviews = {'review': list_reviews}
-        dict_tokenized_reviews = {'tokenized_review': tokenized_reviews}
 
-        # print(list_reviews)
-        print(tokenized_reviews)
+        attention_masks = []
+        for seq in tokenized_reviews:
+            seq_mask = [float(i > 0) for i in seq]
+            attention_masks.append(seq_mask)
 
-        # avoir le nombre de reviews
-        get_all_review = {'number_reviews': len(dict_reviews['review'])}
-        return get_all_review, dict_reviews
+        prediction_inputs = torch.tensor(tokenized_reviews)
+        prediction_masks = torch.tensor(attention_masks)
+
+        print('predictions...')
+
+        # Predictions with finetuned model (Camembert)
+        flat_pred = []
+        with torch.no_grad():
+            outputs = camembert(prediction_inputs, token_type_ids=None,
+                                attention_mask=prediction_masks)
+            logits = outputs[0]
+            logits = logits.detach().cpu().numpy()
+            flat_pred.extend(np.argmax(logits, axis=1).flatten())
+
+        # Formating datas to display
+        data = {
+            'sentiment': flat_pred,
+            'review': list_reviews
+                }
+        df = pd.DataFrame(data, columns=['sentiment', 'review'])
+
+        df_pos = df[df['sentiment'] == 1]
+        df_pos = df_pos['review']
+        df_neg = df[df['sentiment'] == 0]
+        df_neg = df_neg['review']
+
+        dict_pos = df_pos.to_dict()
+        dict_neg = df_neg.to_dict()
+
+        dict_total_reviews = {'Total': len(dict_reviews['review']), 'Positive': len(dict_pos), 'Negative': len(dict_neg)}
+        dict_predicted = {'Positive': dict_pos, 'Negative': dict_neg}
+
+        dict_api = {'Count': dict_total_reviews, 'Reviews': dict_predicted}
+
+        return dict_api
     else:
         return 'not a category'
