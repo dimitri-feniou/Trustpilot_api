@@ -19,16 +19,18 @@ Folders and Files for this Project :
    * Templates  countains index.html for the render of homepage ('http://127.0.0.1:8000/')
 
    * main.py: code to lauch the api on localhost and begin the scrap of reviews on the chosen category
-   * functions.py: to remove all emoji and unnecessary spaces after the scrap in API
+   * functions.py: to remove all emojis and unnecessary spaces after the scrap in API
    * model.py: load the pre-train, fine-tuned model of sentiment analysis used in API - used with "camembert_sentiment_anal.pt"     
-  * data folder : 
-    * trustpilot_reviews.csv: Dataset with french reviews of all categories of the website Truspilot. We use this dataset to train the model
-    * trustpilot_to_predict.csv: Dataset to test the model
+ * data folder : 
+   * trustpilot_reviews.csv: dataset with french reviews of all categories of the website Truspilot. We use this dataset to train the model
+   * trustpilot_to_predict.csv: dataset to test the model
  * model folder :
-   * camembert_trustpilot.ipynb: Colab which contains the trainning of the model - used with "trustpilot_reviews.csv"
-   * predictions.ipynb: Colab for testing the accuracy of the model predictions - used with "trustpilot_to_predict.csv"
-* database_creation : <br> 
-  * scrap_trustpilot.py used to create the dataset for model training
+   * camembert_trustpilot.ipynb: colab which contains the trainning of the model - used with "trustpilot_reviews.csv"
+   * predictions.ipynb: colab for testing the accuracy of the model predictions - used with "trustpilot_to_predict.csv"
+ * database_creation : <br> 
+   * scrap.py: used to create the dataset for model training
+   * merge.py: to merge the scraped datasets
+   * cleaning.py: used to remove emojis and unnecessary space in the training dataset
 
 ## Collab link trained camenBert model on dataset
 
