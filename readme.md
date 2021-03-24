@@ -9,7 +9,7 @@ To make this french sentiment analysis we use the pre-trained model camemBERT.
 
 ## Installation 
 
-All packages you need is on requirements.txt
+All packages you need is on requirements.txt.
 To use just the API use requirement_api.txt
 
 ## Folders/Files
