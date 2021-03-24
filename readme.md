@@ -43,7 +43,12 @@ Folders and Files for this Project :
 https://colab.research.google.com/drive/1kyLGR4OifFgsykcqii3LmYUwIxeoQ0VZ#scrollTo=xJ0vCeTDC3gr
 
 ## Model save link drive
+
 https://drive.google.com/file/d/1lrPJxmk8qJi2KKPpOSCUv3Je2ZsZBV4q/view
+
+## Google slide link
+
+https://docs.google.com/presentation/d/1khh3OWh9W8eaibgVRB7Lw2EJp52GP9zbCpV53CiI3s4/edit#slide=id.gca5633d238_3_19
 
 ## Contributors
 Terence COLLIN, Dimitri FENIOU
