@@ -15,7 +15,7 @@ To use just the API use requirements_api.txt
 ## How to use
 
 * http://127.0.0.1:8000/category - to see the list of categories
-* http://127.0.0.1:8000/trustpilot?category={category}&pages={number_pages} - with the chosen category in {category} and the number of pages scraped in {number_pages}. Peux potentiellement bugger selon la categorie et le nombre de pages choisi.
+* http://127.0.0.1:8000/trustpilot?category={category}&pages={number_pages} - with the chosen category in {category} and the number of pages scraped in {number_pages}. Peux potentiellement bugger selon la categorie et le nombre de pages choisies.
  * http://127.0.0.1:8000/trustpilot - with default values as "aliments" and "1"
 
 ## Folders/Files
