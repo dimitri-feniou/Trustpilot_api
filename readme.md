@@ -4,7 +4,7 @@
 * [Installation](#Installation)
 * [Folders/FIles](#Folders/FIles)
 ## General Info
-This project is a production of API with reviews of Truspilot to know if the reviews of customers is postive or negative.
+This project is the production of an API, scraping reviews on Truspilot and analysing if they are postive or negative.
 To make this french sentiment analysis we use the pre-trained model camemBERT.
 
 ## Installation 
