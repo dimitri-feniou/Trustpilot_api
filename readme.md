@@ -10,8 +10,9 @@ To make this french sentiment analysis we use the pre-trained model camemBERT.
 ## Installation 
 
 All packages you need is on requirements.txt
+To use just the API use requirement_api.txt
 
-## Folders/FIles
+## Folders/Files
 Folders and Files for this Project : 
  * fastapi Folder :<br>
    * Static forder countains styles.css
@@ -23,11 +24,10 @@ Folders and Files for this Project :
   * CSV folder <br>
     * Dataset with french reviews of all categories of the website Truspilot. We use this dataset to train the model
  * Exemples_model Folder
-   * Countains the trainning in the dataset Truspilot
+   * Contains the trainning in the dataset Truspilot
    * Predictions is a notebook for testing the accuracy of the model prediction on dataset
 * Files :
-  * prepocessing.py used for remove all emoji/ html in the dataset
-  * scrap_trustpilot.py used for create the dataset for trained model 
+  * scrap_trustpilot.py used to create the dataset for model training
 
 ## Collab link trained camenBert model on dataset
 
