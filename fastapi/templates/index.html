@@ -1,0 +1,108 @@
+<html>
+<head>
+    <title>Item Details</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1> Api TrustPilot</h1>
+    <p> Bienvenue sur l'API Truspilot.<br>
+            Pour naviguez dans cette API Trustpilot aller sur /truspilot <br>
+    Pour scrapper les information d'une catégorie et le nombre de page à scrapper <b>?{nom_catégorie}&pages= {chiffre}</b>
+</p>
+<h2> Voici la liste des catégories disponible : <h2>        
+        <table>
+            <th colspan="2">Catégories</th>
+            <tr>
+              <td><a href="trustpilot?aliments&pages=1">aliments</a></td>
+              <td>/categories/animals_pets</td>
+            </tr>
+            <tr>
+              <td><a href="trustpilot?argent&pages=1">argent</a></td>
+              <td>categories/money_insurance</td>
+            </tr>
+            <tr>
+                <td><a href="trustpilot?argent&pages=1">animaux</a></td>
+                <td>/categories/animals_pets</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?beauté&pages=1">beauté</a></td>
+                <td>/categories/beauty_wellbeing</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?construction&pages=1">construction</a></td>
+                <td>/categories/construction_manufactoring</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?éducation&pages=1">éducation</a></td>
+                <td>/categories/education_training</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?tech&pages=1">tech</a></td>
+                <td>/categories/electronics_technology</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?événements&pages=1">événements</a></td>
+                <td>/categories/events_entertainment</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?loisir_artisanat&pages=1">loisir_artisanat</a></td>
+                <td>/categories/hobbies_crafts</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?maison_jardin&pages=1">maison_jardin</a></td>
+                <td>/categories/home_garden</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?média&pages=1">média</a></td>
+                <td>/categories/media_publishing</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?érestau_bar&pages=1">restau_bar</a></td>
+                <td>/categories/restaurants_bars</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?santé&pages=1">santé</a></td>
+                <td>/categories/health_medical</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?services&pages=1">services</a></td>
+                <td>/categories/utilities</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?services_domicile&pages=1">services_domicile</a></td>
+                <td>/categories/home_services</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?services_entreprise&pages=1">services_entreprise</a></td>
+                <td>/categories/business_services</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?juridique_admin&pages=1">juridique_admin</a></td>
+                <td>/categories/legal_services_government</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?services_publics&pages=1">services_publics</a></td>
+                <td>/categories/public_local_services</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?mode&pages=1">mode</a></td>
+                <td>/categories/shopping_fashion</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?sport&pages=1">sport</a></td>
+                <td>/categories/shopping_fashion</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?voyage&pages=1">voyage</a></td>
+                <td>/categories/travel_vacation</td>
+              </tr>
+              <tr>
+                <td><a href="trustpilot?véhicule_transport&pages=1">véhicule_transport</a></td>
+                <td>/categories/vehicles_transportation</td>
+              </tr>
+          </table>
+
+
+
+</body>
+</html>
