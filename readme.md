@@ -26,7 +26,7 @@ Folders and Files for this Project :
     * trustpilot_to_predict.csv: Dataset to test the model
  * model folder
    * camembert_trustpilot.ipynb: Colab which contains the trainning of the model - used with "trustpilot_reviews.csv"
-   * Predictions is a notebook for testing the accuracy of the model prediction on dataset
+   * predictions.ipynb: Colab for testing the accuracy of the model predictions - used with "trustpilot_to_predict.csv"
 * Files :
   * scrap_trustpilot.py used to create the dataset for model training
 
