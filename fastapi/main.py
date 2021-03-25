@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI,Request
 from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 from starlette.responses import JSONResponse
@@ -6,6 +6,10 @@ import uvicorn
 import pandas as pd
 import json
 import re
+
+from fastapi.responses import HTMLResponse
+from starlette.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
 
 from bs4 import BeautifulSoup
 import urllib.request
@@ -140,6 +144,14 @@ def scrap(category: str = 'aliments', pages: int = 1):
         'voyage': '/categories/travel_vacation',
         'véhicule_transport': '/categories/vehicles_transportation'
     }
+    <
+app.mount("/static", StaticFiles(directory="fastapi/static"), name="static")
+templates = Jinja2Templates(directory="fastapi/templates")
+
+
+@app.get("/", response_class=HTMLResponse)
+async def read_template(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 
     # Scrap
     if category in dict_cat.keys():
