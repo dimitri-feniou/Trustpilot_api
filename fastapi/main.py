@@ -110,9 +110,13 @@ dict_trustpilot = [
     },
 ]
 
-@app.get("/")
-async def root():
-    return 'hello'
+app.mount("/static", StaticFiles(directory="fastapi/static"), name="static")
+templates = Jinja2Templates(directory="fastapi/templates")
+
+
+@app.get("/", response_class=HTMLResponse)
+async def read_template(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 
 @app.get("/category")
 def get_category():
