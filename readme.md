@@ -1,4 +1,5 @@
 # Trustpilot API French sentiment analysis with CamemBert
+
 ## Table of contents
 * [General info](#general-info)
 * [Installation](#Installation)
